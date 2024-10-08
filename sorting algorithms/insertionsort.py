@@ -6,24 +6,20 @@ def insertionSort(arr):
         key = arr[i]
         j = i - 1
 
-        # Move elements of arr[0..i-1], that are
-        # greater than key, to one position ahead
-        # of their current position
+        #checking the position and inserting at the correct position
         while j >= 0 and key < arr[j]:
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = key
 
-# A utility function to print array of size n
+#printing the element
 def printArray(arr):
     for i in range(len(arr)):
         print(arr[i], end=" ")
     print()
 
-# Driver method
+#main method
 if __name__ == "__main__":
     arr = [23,2,45,16,12,6]
     insertionSort(arr)
     printArray(arr)
-
-    # This code is contributed by Hritik Shah.
